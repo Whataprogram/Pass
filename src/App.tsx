@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Laptop2, Moon, Sun } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
-import { MetricCard } from './components/MetricCard';
-import { StatusIndicator } from './components/StatusIndicator';
 import { Timer } from './components/Timer';
 import { useTheme } from './contexts/ThemeContext';
 import type { ScoutField } from './types';
@@ -331,10 +329,10 @@ const endgameFields: ScoutField[] = [
     formResetBehavior: "reset",
     defaultValue: "No",
     choices: {
-      "No": "Not Parked",
-      "P": "Parked",
-      "Sc": "High Hang",
-      "Dc": "Low Hang",
+      "No": "Not Docked",
+      "P": "Docked",
+      "Sc": "Deep cage",
+      "Dc": "Shallow cage",
       "Fc": "Failed Hang"
     }
   },
